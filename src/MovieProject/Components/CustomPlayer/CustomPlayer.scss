@@ -1,0 +1,162 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.player-container {
+  width: 720px;
+  margin: 40px auto;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px #000;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    margin: 20px auto;
+  }
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 500px;
+  background: black;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+.cc-overlay {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 18px;
+  pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    bottom: 40px;
+  }
+}
+
+.player-container:fullscreen .video-wrapper {
+  height: 100vh;
+}
+
+.controls-container {
+  padding: 12px;
+  background: #181818;
+
+  @media screen and (max-width: 768px) {
+    padding: 8px;
+  }
+}
+
+.progress-bar {
+  width: 100% !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: #e50914;
+  border: none;
+  color: black;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: #f40612;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 70px;
+  }
+}
+
+.time {
+  margin-left: auto;
+  font-size: 14px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.settings-menu {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 8px;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    bottom: 40px;
+    right: 5px;
+    padding: 6px;
+  }
+}
+
+/* Fullscreen adjustments */
+@media screen and (max-width: 480px) {
+  .player-container {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .video-wrapper {
+    height: 200px;
+  }
+
+  .cc-overlay {
+    font-size: 12px;
+    bottom: 30px;
+  }
+
+  .controls-row {
+    gap: 6px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .volume-slider {
+    width: 50px;
+  }
+
+  .time {
+    font-size: 10px;
+  }
+}

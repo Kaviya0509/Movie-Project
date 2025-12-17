@@ -1,0 +1,38 @@
+.footer {
+  background: #000;
+  color: #757575;
+  padding: 50px 8%;
+  font-size: 14px;
+}
+
+.call-text {
+  margin-bottom: 30px;
+
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+  }
+}
+
+.country-text {
+  margin-top: 30px;
+}
+.company-text {
+  margin-top: 10px;
+}

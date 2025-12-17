@@ -1,0 +1,30 @@
+// Input.scss
+
+input {
+  width: 100%;
+  max-width: 678px; // adjust as needed
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+
+  &:focus {
+    border-color: #e50914; // Netflix-style red
+    box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+    background-color: #fff;
+  }
+
+  &::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+}
+
+// Optional: for smaller input inside navbar
+.search-bar {
+  max-width: 250px;
+  padding: 6px 10px;
+}
